@@ -1,0 +1,165 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+}
+body{
+    min-height: 100svh;
+    max-width: 100svw;
+
+    display: grid;
+
+    grid-template-columns:1fr 4fr;
+  
+    grid-template-areas: 
+    "header header"
+    "aside body"
+    "aside footer";
+   font-family: "Playwrite AU NSW", cursive;
+}
+/*.grid-container{
+    display:grid;
+    background-color: black;
+    color: white;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: 70px,350px,350px,70px;
+    gap :10px;
+    padding: 30px;
+}*/
+/*.grid-container div,header,footer,aside{
+    background-color: blue;
+    padding: 30px;
+    
+}
+header{
+    grid-column:1/4;
+    grid-row:1/2;
+}
+
+footer
+    grid-column:1/4;
+    grid-row: 4/5;
+
+}
+.content1{
+    grid-row:2/3;
+    grid-column:2/4;
+}
+aside{
+    grid-row:2/4;
+    grid-column:1/2;
+}*/
+/*.task2{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 70px 300px 70px;
+    gap:10px;
+    padding:20px;
+    grid-template-areas:
+     "r r"
+    "y b "
+    "g g";
+
+}
+.r{
+    background-color: red;
+    grid-area: r;
+}
+.b{
+    background-color: blue;
+    grid-area: b
+}
+.g{
+    background-color: green;
+    grid-area: g;
+}
+.y{
+    background-color: yellow;
+    grid-area: y;
+}*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(5, 5, 50);
+    color: white;
+    padding: 20px;
+    grid-area:header;
+}
+.category{
+    background-color: rgb(39, 39, 116);
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 10px 0px 0px;
+   padding-left: 10px;
+}
+.category p{
+    margin:10px 0px;
+}
+nav ul {
+    display: flex;
+    gap:20px
+
+}
+
+.category ul li{
+    margin-top:10px
+}
+
+.main-image{
+  padding: 10px;
+}
+
+.main-image h2{
+    padding: 15px;
+}
+
+.images{
+     grid-area:body;
+     gap:20px;
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    
+}
+.images div{
+    overflow: hidden;
+}
+.images div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 1s;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.images div img:hover{
+    transform: scale(1.3) rotate(20deg);
+}
+
+@media(max-width:426px){
+    .category{
+        display: none;
+    }
+
+    body{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "body"
+        "footer"
+
+    }
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    padding: 10px;
+}
+
+
